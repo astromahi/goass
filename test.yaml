@@ -1,0 +1,58 @@
+plants:
+  - name: chennai
+    place: Mylapore
+    blocks:
+      - name: B01
+        loggers:
+          - name: iGate1
+            inverters:
+              - addr: 1
+                power: 1000 # kW
+      - name: B02
+        loggers:
+          - name: iGate2
+            inverters:
+              - addr: 1
+                power: 500 # kW
+          - name: iGate3
+            inverters:
+              - addr: 1
+                power: 100 # kW
+              - addr: 2
+                power: 100 # kW
+              - addr: 3
+                power: 100 # kW
+              - addr: 4
+                power: 100 # kW
+              - addr: 5
+                power: 100 # kW
+
+  - name: mumbai
+    place: City
+    blocks:
+      - name: B01
+        loggers:
+          - name: iGate1
+            inverters:
+              - addr: 1
+                power: 500 # kW
+          - name: iGate2
+            inverters:
+              - addr: 2
+                power: 500 # kW
+          - name: iGate3
+            inverters:
+              - addr: 3
+                power: 500 # kW
+      - name: B02
+        loggers:
+          - name: iGate4
+            inverters:
+              - addr: 1
+                power: 500 # kW
+          - name: iGate5
+            inverters:
+              - addr: 1
+                power: 100 # kW
+              - addr: 2
+                power: 100 # kW
