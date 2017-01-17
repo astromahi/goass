@@ -1,6 +1,8 @@
 ## Task 1: 
   - Fork this github repository, checkout, compile and run *goass* application,
-  - Find swagger ui at [http://localhost:8123/apidocs/](http://localhost:8123/apidocs/)
+  - Find swagger ui at [http://localhost:8123/apidocs/](http://localhost:8123/apidocs/):
+  
+![screenshot](screen-swagger-version.png)
 
 ## Task 2:
   - implement "getplantpower" calculation of plant's total power
