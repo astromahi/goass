@@ -6,7 +6,7 @@
 
 ## Task 2:
   - implement "getplantpower" calculation of plant's total power
-    ([*main.go*, lines 109 ff](main.go#L113) )
+    ([*main.go*, lines 113 ff](main.go#L113) )
 
 ## Task 3:
   - document / comment / explain the sample "alarming" implementation in *alarming.go*
