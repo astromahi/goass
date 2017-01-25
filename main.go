@@ -116,5 +116,31 @@ func getplantpower(r *restful.Request, w *restful.Response) {
 		w.WriteError(http.StatusNotAcceptable, fmt.Errorf("plant name required"))
 		return
 	}
-	w.Write([]byte("please implement this"))
+
+	file, err := ioutil.ReadFile("./test.yaml")
+	if err != nil {
+		w.WriteError(http.StatusNotAcceptable, fmt.Errorf(" cannot read definition, err= %v", err))
+		return
+	}
+
+	data := DataDef{}
+	if err = yaml.Unmarshal(file, &data); err != nil {
+		w.WriteError(http.StatusNotAcceptable, fmt.Errorf(" cannot unmarshal definition, err= %v", err))
+		return
+	}
+
+	var totalPower float32
+	for _, p := range data.Plants {
+		if p.Name == plant {
+			for _, b := range p.Blocks {
+				for _, l := range b.Loggers {
+					for _, i := range l.Inverters {
+						totalPower += i.Power
+					}
+				}
+			}
+			break
+		}
+	}
+	w.WriteAsJson(struct{ Power float32 }{totalPower})
 }
